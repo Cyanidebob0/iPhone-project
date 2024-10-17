@@ -1,7 +1,17 @@
-export default function App() {
+import React from 'react'
+import Navbar from "./components/Navbar"
+import Hero from "./components/Hero"
+import Highlights from "./components/Highlights"
+
+
+const App = () => {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <main>
+      <Navbar />
+      
+      <Highlights />
+    </main>
   )
 }
+
+export default App
