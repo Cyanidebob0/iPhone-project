@@ -6,7 +6,7 @@ const VideoCarousel = () => {
     <>
       <div className="flex items-center">
         {hightlightsSlides.map((list, i) => (
-          <div className=" sn:pr-20 pr-10" key={list.id} id="slider">
+          <div className=" sm:pr-20 pr-10" key={list.id} id="slider">
             <div className="video-carousel_container">
               <div className="w-full h-full flex-center rounded-3xl overflow-hidden bg-black">
                 <video id="video" playsInline={true} preload="auto" muted>
