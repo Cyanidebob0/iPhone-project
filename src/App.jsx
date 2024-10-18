@@ -2,6 +2,9 @@ import React from 'react'
 import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
 import Highlights from "./components/Highlights"
+import Models from "./components/Models"
+
+
 
 
 const App = () => {
@@ -10,6 +13,7 @@ const App = () => {
       <Navbar />
       <Hero />
       <Highlights />
+      <Models />
     </main>
   )
 }
