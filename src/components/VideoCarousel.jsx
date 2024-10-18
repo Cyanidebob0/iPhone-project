@@ -3,6 +3,9 @@ import { hightlightsSlides } from "../constants";
 import gsap from "gsap";
 import { pauseImg, playImg, replayImg } from "../utils";
 import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const VideoCarousel = () => {
   const videoRef = useRef([]);
@@ -156,6 +159,9 @@ const VideoCarousel = () => {
                   preload="auto"
                   muted
                   ref={(el) => (videoRef.current[i] = el)}
+                  className={`${
+                    list.id === 2 && "translate-x-44"
+                  } pointer-events-none`}
                   onEnded={() =>
                     i !== 3
                       ? handleProcess("video-end", i)
@@ -171,8 +177,11 @@ const VideoCarousel = () => {
               </div>
 
               <div className="absolute top-12 left-[5%] z-10">
-                {list.textLists.map((text) => (
-                  <p className=" md:text-2xl text-xl font-medium" key="text">
+                {list.textLists.map((text, index) => (
+                  <p
+                    className=" md:text-2xl text-xl font-medium"
+                    key={`${list.id}-${index}`}
+                  >
                     {text}
                   </p>
                 ))}
