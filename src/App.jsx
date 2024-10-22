@@ -1,11 +1,8 @@
-import React from 'react'
-import Navbar from "./components/Navbar"
-import Hero from "./components/Hero"
-import Highlights from "./components/Highlights"
-import Models from "./components/Models"
-
-
-
+import React from "react";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Highlights from "./components/Highlights";
+import Model from "./components/Model";
 
 const App = () => {
   return (
@@ -13,9 +10,9 @@ const App = () => {
       <Navbar />
       <Hero />
       <Highlights />
-      <Models />
+      <Model />
     </main>
-  )
-}
+  );
+};
 
-export default App
+export default App;
