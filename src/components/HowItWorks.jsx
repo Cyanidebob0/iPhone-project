@@ -59,6 +59,7 @@ const HowItWorks = () => {
                 className="pointer-events-none"
                 playsInline
                 preload="none"
+                loop
                 muted
                 autoPlay
                 ref={videoRef}
